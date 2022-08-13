@@ -12,3 +12,5 @@ Run in the console
 1. `composer install`
 
 2. `yarn`
+
+![Screenshot](https://i.imgur.com/MCUPJLM.png "Screenshot")
