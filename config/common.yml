@@ -1,0 +1,4 @@
+services:
+  prestashop.module.wnblocks.product_repository:
+    class: 'PrestaShop\Module\WnBlocks\Repository\ProductRepository'
+    arguments: [ '@doctrine.dbal.default_connection', '%database_prefix%' ]

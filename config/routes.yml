@@ -1,0 +1,11 @@
+settings_page:
+  path: /wnblocks/settings
+  methods: [GET, POST]
+  defaults:
+    _controller: 'PrestaShop\Module\WnBlocks\Controller\SettingsController::index'
+
+settings_page_save:
+  path: /wnblocks/settings/save
+  methods: [POST]
+  defaults:
+    _controller: 'PrestaShop\Module\WnBlocks\Controller\SettingsController::saveSettings'

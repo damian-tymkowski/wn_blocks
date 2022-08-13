@@ -1,0 +1,132 @@
+.wn_blocks {
+  display: flex;
+  gap: 1%;
+
+  @media only screen and (max-width: 1000px) {
+   flex-direction: column;
+  }
+}
+
+.wn_block {
+  background-color: #e5e5e5;
+  padding: 25px;
+  width: 33.3333333333%;
+  position: relative;
+  @media only screen and (max-width: 1000px) {
+   width: 100%;
+  }
+  &__header {
+    font-size: 1.2rem;
+    position: relative;
+    font-weight: 500;
+
+    &:after {
+      content: '';
+      width: 15%;
+      background-color: red;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
+  &__image {
+    width: 25%;
+    height: 100%;
+  }
+
+  &__product {
+    display: flex !important;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    gap: 1%;
+
+    &--name {
+      width: 50%;
+      margin: 0;
+      font-size: 0.8rem;
+    }
+
+    &--price {
+      color: #0f880f;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__actions {
+    width: 25%;
+    text-align: right;
+  }
+
+  &__form {
+    display: flex;
+    gap: 5%;
+    justify-content: flex-end;
+  }
+
+  &__input {
+    border-radius: 50%;
+    box-shadow: unset;
+    border: 1px solid #6b6b6b;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+  }
+
+  &__button {
+    height: 35px;
+    width: 35px;
+    border: unset;
+    background: #0f880f;
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:focus {
+      outline: 5px auto #fff;
+    }
+
+    &--secondary {
+      background: #ececec;
+      border: 2px solid #ababab;
+
+      &:focus {
+        outline: 5px auto #4b4b4b;
+      }
+    }
+  }
+
+  &__show-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #0f880f;
+    border: 1px solid #0f880f;
+    padding: 10px;
+
+    &:hover {
+      color: #25b025;
+    }
+  }
+
+}
+
+.slick-slide {
+  margin: 5px 0px;
+}
+
+.slider_arrows {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}

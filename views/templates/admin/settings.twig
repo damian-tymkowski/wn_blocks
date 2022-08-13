@@ -1,0 +1,28 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+{% block content %}
+    {% form_theme settingsForm 'PrestaShopBundle:Admin/TwigTemplateForm:prestashop_ui_kit.html.twig' %}
+    {{ form_start(settingsForm, {attr : {class: 'form'}, action: path('settings_page_save') })}}
+    <div class="card">
+        <h3 class="card-header">
+            <i class="material-icons">settings</i> {{ 'Ustawienia'|trans({}, 'Modules.WnBlocks.Admin') }}
+        </h3>
+        <div class="card-block row">
+            <div class="card-text">
+                {{ form_widget(settingsForm) }}
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary float-right" id="save-button">
+                    {{ 'Zapisz'|trans({}, 'Admin.Actions') }}
+                </button>
+            </div>
+        </div>
+    </div>
+    {{ form_end(settingsForm) }}
+{% endblock  %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('../modules/wn_blocks/views/js/admin.js') }}"></script>
+{% endblock %}
+
